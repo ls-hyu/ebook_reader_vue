@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+#from package import ebook
 
 # configuration
 DEBUG = True
@@ -18,6 +19,12 @@ def ping_pong():
 
 @app.route('/greeting')
 def greeting():
+    #from .ebook import read
+    #read()
+    #from api.test import api
+    import ebook
+    import ebooklib
+    ebook.read()
     return {"greeting": "Hi!!!!"}
 
 
